@@ -3,11 +3,11 @@ import shutil
 import customtkinter as ctk
 from tkinter import messagebox
 
-# Initialize customtkinter with dark theme
+# Customtkinter with dark theme
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
 
-# Global variables to track moved files and user-selected files
+# Variables to track moved files and user-selected files
 moved_files = {}
 selected_files = {}
 
@@ -96,7 +96,7 @@ def undo_organize():
             messagebox.showinfo("Undo", "No changes to undo!")
             return
 
-        # Move files back to their original locations
+        # Move files back to their old locations
         for new_path, original_path in moved_files.items():
             shutil.move(new_path, original_path)
 
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     app.geometry("500x500")
     app.title("Desktop File Organizer")
 
-    # Add a title label
+    # Title label
     title_label = ctk.CTkLabel(app, text="Desktop File Organizer", font=("Arial", 18))
     title_label.pack(pady=10)
 
